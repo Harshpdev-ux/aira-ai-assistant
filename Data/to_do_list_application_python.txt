@@ -1,0 +1,137 @@
+**To-Do List Application in Python**
+=====================================
+
+This is a simple To-Do List application implemented in Python. The application allows users to add, remove, and mark tasks as completed.
+
+**Features**
+
+*   Add new tasks
+*   Remove existing tasks
+*   Mark tasks as completed
+*   Display all tasks
+*   Display completed tasks
+*   Display pending tasks
+
+**Code**
+```python
+# to_do_list.py
+
+class Task:
+    def __init__(self, description):
+        self.description = description
+        self.completed = False
+
+    def mark_as_completed(self):
+        self.completed = True
+
+    def __str__(self):
+        status = "Completed" if self.completed else "Pending"
+        return f"{self.description} - {status}"
+
+class ToDoList:
+    def __init__(self):
+        self.tasks = []
+
+    def add_task(self, description):
+        task = Task(description)
+        self.tasks.append(task)
+        print(f"Task '{description}' added successfully.")
+
+    def remove_task(self, task_number):
+        try:
+            del self.tasks[task_number - 1]
+            print(f"Task {task_number} removed successfully.")
+        except IndexError:
+            print("Invalid task number.")
+
+    def mark_task_as_completed(self, task_number):
+        try:
+            task = self.tasks[task_number - 1]
+            task.mark_as_completed()
+            print(f"Task {task_number} marked as completed.")
+        except IndexError:
+            print("Invalid task number.")
+
+    def display_all_tasks(self):
+        print("\nAll Tasks:")
+        for i, task in enumerate(self.tasks, start=1):
+            print(f"{i}. {task}")
+
+    def display_completed_tasks(self):
+        print("\nCompleted Tasks:")
+        for i, task in enumerate([t for t in self.tasks if t.completed], start=1):
+            print(f"{i}. {task}")
+
+    def display_pending_tasks(self):
+        print("\nPending Tasks:")
+        for i, task in enumerate([t for t in self.tasks if not t.completed], start=1):
+            print(f"{i}. {task}")
+
+def main():
+    todo_list = ToDoList()
+
+    while True:
+        print("\nTo-Do List Menu:")
+        print("1. Add Task")
+        print("2. Remove Task")
+        print("3. Mark Task as Completed")
+        print("4. Display All Tasks")
+        print("5. Display Completed Tasks")
+        print("6. Display Pending Tasks")
+        print("7. Quit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            description = input("Enter task description: ")
+            todo_list.add_task(description)
+        elif choice == "2":
+            task_number = int(input("Enter task number to remove: "))
+            todo_list.remove_task(task_number)
+        elif choice == "3":
+            task_number = int(input("Enter task number to mark as completed: "))
+            todo_list.mark_task_as_completed(task_number)
+        elif choice == "4":
+            todo_list.display_all_tasks()
+        elif choice == "5":
+            todo_list.display_completed_tasks()
+        elif choice == "6":
+            todo_list.display_pending_tasks()
+        elif choice == "7":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+```
+
+**Example Use Cases**
+
+1.  **Adding Tasks**
+
+    *   Run the application and select option 1 to add a task.
+    *   Enter the task description when prompted.
+    *   The task will be added to the list, and a success message will be displayed.
+2.  **Removing Tasks**
+
+    *   Run the application and select option 2 to remove a task.
+    *   Enter the task number of the task you want to remove.
+    *   The task will be removed from the list, and a success message will be displayed.
+3.  **Marking Tasks as Completed**
+
+    *   Run the application and select option 3 to mark a task as completed.
+    *   Enter the task number of the task you want to mark as completed.
+    *   The task will be marked as completed, and a success message will be displayed.
+4.  **Displaying Tasks**
+
+    *   Run the application and select option 4 to display all tasks.
+    *   A list of all tasks will be displayed, including their status (completed or pending).
+    *   You can also display completed tasks (option 5) or pending tasks (option 6) separately.
+
+**Advice**
+
+*   You can modify the application to store tasks in a file or database for persistence.
+*   You can add more features, such as due dates, reminders, or prioritization, to make the application more useful.
+*   You can use a GUI framework like Tkinter or PyQt to create a graphical user interface for the application.

@@ -1,0 +1,30 @@
+**Multiplication of Two Numbers in Python**
+```python
+# Define a function to multiply two numbers
+def multiply(num1, num2):
+    return num1 * num2
+
+# Take input from the user
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+# Call the function and store the result
+result = multiply(num1, num2)
+
+# Print the result
+print("The product of", num1, "and", num2, "is:", result)
+```
+**Example Use Case:**
+
+* Input: `num1 = 5`, `num2 = 6`
+* Output: `The product of 5.0 and 6.0 is: 30.0`
+
+**Alternative Implementation:**
+```python
+# Direct multiplication without a function
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+result = num1 * num2
+print("The product of", num1, "and", num2, "is:", result)
+```
+Note: The `float()` function is used to allow the user to input decimal numbers. If you want to restrict the input to integers only, you can use the `int()` function instead.

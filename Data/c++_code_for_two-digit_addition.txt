@@ -1,0 +1,52 @@
+**Two-Digit Addition in C++**
+================================
+
+Below is a simple C++ program that adds two two-digit numbers.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// Function to add two two-digit numbers
+int addTwoDigitNumbers(int num1, int num2) {
+    return num1 + num2;
+}
+
+int main() {
+    int num1, num2;
+
+    // Input two two-digit numbers
+    cout << "Enter first two-digit number: ";
+    cin >> num1;
+    cout << "Enter second two-digit number: ";
+    cin >> num2;
+
+    // Validate input (ensure numbers are two-digit)
+    if (num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99) {
+        cout << "Invalid input. Please enter two-digit numbers." << endl;
+        return 1;
+    }
+
+    // Calculate and display the sum
+    int sum = addTwoDigitNumbers(num1, num2);
+    cout << "The sum of " << num1 << " and " << num2 << " is: " << sum << endl;
+
+    return 0;
+}
+```
+
+**How the Code Works:**
+
+1.  **Input**: The program prompts the user to input two two-digit numbers, `num1` and `num2`.
+2.  **Validation**: It checks if both numbers are indeed two-digit (i.e., between 10 and 99). If not, it displays an error message and exits.
+3.  **Calculation**: The `addTwoDigitNumbers` function simply adds `num1` and `num2`.
+4.  **Output**: The program displays the sum of the two input numbers.
+
+**Example Use Cases:**
+
+*   Input: `num1 = 45`, `num2 = 27`
+    Output: `The sum of 45 and 27 is: 72`
+*   Input: `num1 = 98`, `num2 = 11`
+    Output: `The sum of 98 and 11 is: 109`
+
+To compile and run this code, save it in a file with a `.cpp` extension (e.g., `two_digit_addition.cpp`) and use a C++ compiler like `g++`. Then, execute the resulting executable file.

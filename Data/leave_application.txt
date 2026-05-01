@@ -1,0 +1,37 @@
+[Your Name]
+[Your Address]
+[City, State, PIN]
+[Date]
+
+[Recipient's Name]
+[Recipient's Designation]
+[Company/Organization Name]
+[Company/Organization Address]
+[City, State, PIN]
+
+Subject: Application for Leave
+
+Dear [Recipient's Name],
+
+I am writing to request a leave of absence from work for [number] days, starting from [start date] and returning on [end date]. I have a [personal/family/health] reason that requires my attention during this time, and I will be unable to come to work.
+
+I have made sure to complete all my tasks and ensure a smooth transition of work during my absence. I have spoken to my team members and made arrangements for them to handle my responsibilities while I am away.
+
+I would greatly appreciate it if you could approve my leave application. If there is any additional information you need from me, please let me know. I am available to discuss this further if needed.
+
+My leave details are as follows:
+
+* Leave type: [annual/sick/casual]
+* Number of days: [number]
+* Start date: [start date]
+* End date: [end date]
+
+I am committed to my work and will make sure to catch up on any missed work as soon as possible upon my return. If there are any pressing matters that need my attention before my leave, please let me know.
+
+Thank you for considering my leave application. I look forward to your response.
+
+Sincerely,
+
+[Your Name]
+[Your Employee ID]
+[Your Contact Information]
