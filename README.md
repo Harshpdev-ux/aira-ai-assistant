@@ -115,7 +115,7 @@ API_KEY=your_api_key_here
 
 ## 👨‍💻 Author
 
-**Harshal Patil**
+**Harshal Patil**  
 🔗 GitHub: https://github.com/Harshpdev-ux
 
 ---
